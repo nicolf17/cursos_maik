@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cursos_maik
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cursos_maik
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
