@@ -1,4 +1,4 @@
-package org.cursos.maik.dto;
+package org.cursos.maik.dto.request;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;
@@ -8,14 +8,14 @@ public class CursoRequestDTO {
 
     @NotBlank
     @Size(min = 3, max = 50)
-    private String nombre;
+    private String titulo;
 
     @NotBlank
     @Size(min = 10, max = 200)
     private String descripcion;
 
-    @NotNull
-    @Min(1)
-    @Max(300)
-    private Integer duracion;
+    @NotBlank
+    @Size(min = 10, max = 200)
+    private Long id_categoria;
+
 }

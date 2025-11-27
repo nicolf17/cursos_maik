@@ -9,9 +9,12 @@ import lombok.Data;
 public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_curso;
 
-    private String nombre;
+    private String titulo;
     private String descripcion;
-    private Integer duracion;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", nullable = false)
+    private Categoria categoria;
 }

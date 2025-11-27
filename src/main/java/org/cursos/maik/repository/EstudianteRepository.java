@@ -1,11 +1,9 @@
 package org.cursos.maik.repository;
 
-import org.cursos.maik.entity.Curso;
+import org.cursos.maik.entity.Estudiante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface CursoRepository extends JpaRepository<Curso, Long> {
+public interface EstudianteRepository extends JpaRepository<Estudiante, Long> {
 }

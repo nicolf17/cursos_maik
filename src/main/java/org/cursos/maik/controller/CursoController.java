@@ -1,7 +1,7 @@
 package org.cursos.maik.controller;
 
-import org.cursos.maik.dto.CursoRequestDTO;
-import org.cursos.maik.dto.CursoResponseDTO;
+import org.cursos.maik.dto.request.CursoRequestDTO;
+import org.cursos.maik.dto.response.CursoResponseDTO;
 import org.cursos.maik.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,6 +21,11 @@ public class CursoController {
     public ResponseEntity<CursoResponseDTO> crearCurso(@RequestBody CursoRequestDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(cursoService.crearCurso(dto));
+    }
+
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<CursoResponseDTO> actualizarCurso(@PathVariable Long id, @RequestBody CursoRequestDTO dto) {
+        return ResponseEntity.ok(cursoService.actualizarCurso(id, dto));
     }
 
     @GetMapping("/listar")

@@ -1,0 +1,7 @@
+create database cursos_maik;
+
+use cursos_maik;
+
+select * from cursos;
+
+drop database cursos_maik;
